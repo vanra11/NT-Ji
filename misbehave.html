@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Someone Misbehaved 😡 </title>
+    <title>Someone Misbehaved 😡</title>
     <link
       href="https://fonts.googleapis.com/css2?family=Creepster&display=swap"
       rel="stylesheet"
@@ -15,17 +15,24 @@
         font-family: "Creepster", cursive;
         margin: 0;
         padding: 0;
+        height: 100vh;
         display: flex;
         justify-content: center;
         align-items: center;
-        height: 100vh;
-        flex-direction: column;
+      }
+
+      .wrapper {
+        position: relative;
+        width: 400px;
+        height: 400px;
       }
 
       .image-container {
-        position: relative;
-        width: 300px;
-        height: 300px;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
       }
 
       .image-container img {
@@ -33,56 +40,60 @@
         height: 80%;
         object-fit: cover;
         border: 3px solid red;
+        z-index: 1;
       }
 
       .line {
         position: absolute;
         color: red;
-        font-size: 18px;
-        width: 150px;
+        font-size: 16px;
+        width: 160px;
         text-align: center;
-        transform-origin: center;
+        z-index: 2;
       }
 
       .top-left {
-        top: -40px;
+        top: -30px;
         left: -100px;
-        transform: rotate(-25deg);
+        transform: rotate(-25deg) translate(-10px, 0);
       }
 
       .top-right {
-        top: -40px;
+        top: -30px;
         right: -100px;
-        transform: rotate(25deg);
+        transform: rotate(25deg) translate(10px, 0);
       }
 
       .bottom-left {
-        bottom: -40px;
+        bottom: -30px;
         left: -100px;
-        transform: rotate(25deg);
+        transform: rotate(25deg) translate(-10px, 0);
       }
 
       .bottom-right {
-        bottom: -40px;
+        bottom: -30px;
         right: -100px;
-        transform: rotate(-25deg);
+        transform: rotate(-25deg) translate(10px, 0);
       }
     </style>
   </head>
   <body>
-    <div class="image-container">
-      <img src="Misbehave.jpg" alt="Angry Face" />
-
-      <!-- Slanted lines -->
+    <div class="wrapper">
       <div class="line top-left">
-        Kyu be chhipkali🦎, ladies se aise baat karega
+        Kyu be chhipkali 🦎,<br />ladies se aise baat karega
       </div>
-      <div class="line top-right">You room temperature IQ 🐸, stay away</div>
+      <div class="line top-right">
+        You room temperature IQ 🐸,<br />stay away
+      </div>
       <div class="line bottom-left">
-        Jeene ki ichha khatam ho gayi hai kya be 🧟
+        Jeene ki ichha<br />khatam ho gayi hai kya be 🧟
       </div>
       <div class="line bottom-right">
-        You could only speak because I don't have a 🔫 yet
+        You could only speak<br />because I don't have a 🔫 yet
+      </div>
+
+      <div class="image-container">
+        <img src="Misbehave.jpg" alt="Angry Face" />
       </div>
     </div>
   </body>
